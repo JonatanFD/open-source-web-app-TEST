@@ -1,0 +1,32 @@
+<main>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" opened class="sidenav">
+      <header>
+        <img src="assets/quri-logo.png" alt="logo" />
+      </header>
+      <nav>
+        <ul>
+          @for (route of routes; track route.path) {
+            <a
+              [routerLink]="route.path"
+              routerLinkActive="active"
+              class="nav-link"
+            >
+              <li>
+                <mat-icon>
+                  {{ route.icon }}
+                </mat-icon>
+                <span>
+                  {{ route.label }}
+                </span>
+              </li>
+            </a>
+          }
+        </ul>
+      </nav>
+    </mat-sidenav>
+    <mat-sidenav-content class="sidenav-content">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</main>
