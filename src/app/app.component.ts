@@ -1,8 +1,15 @@
 import { Component } from "@angular/core";
-import { RouterLink, RouterLinkActive, RouterOutlet } from "@angular/router";
+import {
+  NavigationEnd,
+  Router,
+  RouterLink,
+  RouterLinkActive,
+  RouterOutlet,
+} from "@angular/router";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
+import { filter } from "rxjs";
 
 @Component({
   selector: "app-root",
@@ -19,6 +26,7 @@ import { MatIconModule } from "@angular/material/icon";
 })
 export class AppComponent {
   title = "open-source-web-app-TEST";
+  currentPage = "";
 
   routes = [
     {
@@ -52,4 +60,16 @@ export class AppComponent {
       icon: "brush",
     },
   ];
+
+  constructor(private router: Router) {
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        const currentPath = this.router.url;
+        const currentPage = this.routes.find((p) =>
+          currentPath.startsWith(p.path),
+        );
+        this.currentPage = currentPage ? currentPage.label : "";
+      });
+  }
 }

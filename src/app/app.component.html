@@ -26,6 +26,26 @@
       </nav>
     </mat-sidenav>
     <mat-sidenav-content class="sidenav-content">
+      <header>
+        <h2>
+          {{ this.currentPage }}
+        </h2>
+
+        <div>
+          <!-- TODO: change link to template/new -->
+          <a mat-flat-button routerLink="">
+            <mat-icon>add</mat-icon>
+            Create
+          </a>
+
+          <button mat-icon-button>
+            <mat-icon>search</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>person</mat-icon>
+          </button>
+        </div>
+      </header>
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
