@@ -1,0 +1,204 @@
+{
+  "settings": {
+    "theme": "light",
+    "language": "en",
+    "notifications": true
+  },
+  "projects": [
+    {
+      "id": "proj-001",
+      "user_id": "user-001",
+      "created_at": "2024-03-20T10:00:00Z",
+      "status": "blueprint",
+      "preview_image_url": "https://example.com/previews/proj-001.jpg",
+      "name": "Summer Collection T-Shirt",
+      "tshirt_color": "#FFFFFF",
+      "tshirt_size": "M",
+      "last_modified": "2024-03-20T15:30:00Z",
+      "canvas": {
+        "id": "canvas-001",
+        "project_id": "proj-001",
+        "background_color": "#FFFFFF",
+        "created_at": "2024-03-20T10:00:00Z",
+        "last_modified": "2024-03-20T15:30:00Z",
+        "layers": [
+          {
+            "id": "layer-001",
+            "canvas_id": "canvas-001",
+            "type": "text",
+            "z_index": 1,
+            "content": {
+              "text": "Summer Vibes",
+              "x": 100,
+              "y": 150,
+              "font_family": "Arial",
+              "font_size": 24,
+              "font_weight": 700,
+              "color": "#000000",
+              "rotation": 0,
+              "text_align": "center",
+              "opacity": 1
+            },
+            "is_visible": true,
+            "created_at": "2024-03-20T10:05:00Z",
+            "last_modified": "2024-03-20T15:30:00Z"
+          },
+          {
+            "id": "layer-002",
+            "canvas_id": "canvas-001",
+            "type": "image",
+            "z_index": 2,
+            "content": {
+              "image_url": "https://example.com/images/summer-icon.png",
+              "width": 200,
+              "height": 200,
+              "x": 150,
+              "y": 200,
+              "rotation": 0,
+              "opacity": 1,
+              "scale": 1,
+              "maintain_aspect_ratio": true
+            },
+            "is_visible": true,
+            "created_at": "2024-03-20T10:10:00Z",
+            "last_modified": "2024-03-20T15:30:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "id": "proj-002",
+      "user_id": "user-001",
+      "created_at": "2024-03-19T14:20:00Z",
+      "status": "designed-garment",
+      "preview_image_url": "https://example.com/previews/proj-002.jpg",
+      "name": "Urban Style Design",
+      "tshirt_color": "#000000",
+      "tshirt_size": "L",
+      "last_modified": "2024-03-20T09:15:00Z",
+      "canvas": {
+        "id": "canvas-002",
+        "project_id": "proj-002",
+        "background_color": "#000000",
+        "created_at": "2024-03-19T14:20:00Z",
+        "last_modified": "2024-03-20T09:15:00Z",
+        "layers": [
+          {
+            "id": "layer-003",
+            "canvas_id": "canvas-002",
+            "type": "text",
+            "z_index": 1,
+            "content": {
+              "text": "Urban Style",
+              "x": 100,
+              "y": 150,
+              "font_family": "Helvetica",
+              "font_size": 32,
+              "font_weight": 800,
+              "color": "#FFFFFF",
+              "rotation": 0,
+              "text_align": "center",
+              "opacity": 1
+            },
+            "is_visible": true,
+            "created_at": "2024-03-19T14:25:00Z",
+            "last_modified": "2024-03-20T09:15:00Z"
+          }
+        ]
+      }
+    }
+  ],
+  "canvases": [
+    {
+      "id": "canvas-001",
+      "project_id": "proj-001",
+      "background_color": "#FFFFFF",
+      "created_at": "2024-03-20T10:00:00Z",
+      "last_modified": "2024-03-20T15:30:00Z",
+      "layers": [
+        {
+          "id": "layer-001",
+          "canvas_id": "canvas-001",
+          "type": "text",
+          "z_index": 1,
+          "content": {
+            "text": "Summer Vibes",
+            "x": 100,
+            "y": 150,
+            "font_family": "Arial",
+            "font_size": 24,
+            "font_weight": 700,
+            "color": "#000000",
+            "rotation": 0,
+            "text_align": "center",
+            "opacity": 1
+          },
+          "is_visible": true,
+          "created_at": "2024-03-20T10:05:00Z",
+          "last_modified": "2024-03-20T15:30:00Z"
+        },
+        {
+          "id": "layer-002",
+          "canvas_id": "canvas-001",
+          "type": "image",
+          "z_index": 2,
+          "content": {
+            "image_url": "https://example.com/images/summer-icon.png",
+            "width": 200,
+            "height": 200,
+            "x": 150,
+            "y": 200,
+            "rotation": 0,
+            "opacity": 1,
+            "scale": 1,
+            "maintain_aspect_ratio": true
+          },
+          "is_visible": true,
+          "created_at": "2024-03-20T10:10:00Z",
+          "last_modified": "2024-03-20T15:30:00Z"
+        }
+      ]
+    },
+    {
+      "id": "canvas-002",
+      "project_id": "proj-002",
+      "background_color": "#000000",
+      "created_at": "2024-03-19T14:20:00Z",
+      "last_modified": "2024-03-20T09:15:00Z",
+      "layers": [
+        {
+          "id": "layer-003",
+          "canvas_id": "canvas-002",
+          "type": "text",
+          "z_index": 1,
+          "content": {
+            "text": "Urban Style",
+            "x": 100,
+            "y": 150,
+            "font_family": "Helvetica",
+            "font_size": 32,
+            "font_weight": 800,
+            "color": "#FFFFFF",
+            "rotation": 0,
+            "text_align": "center",
+            "opacity": 1
+          },
+          "is_visible": true,
+          "created_at": "2024-03-19T14:25:00Z",
+          "last_modified": "2024-03-20T09:15:00Z"
+        }
+      ]
+    }
+  ],
+  "templates": [],
+  "favorites": [],
+  "designs": [],
+  "users": [
+    {
+      "id": "user-001",
+      "email": "user@example.com",
+      "name": "Test User",
+      "created_at": "2024-03-19T00:00:00Z"
+    }
+  ]
+}

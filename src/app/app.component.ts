@@ -10,6 +10,7 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { filter } from "rxjs";
+import { AppRoute } from "./types";
 
 @Component({
   selector: "app-root",
@@ -28,7 +29,7 @@ export class AppComponent {
   title = "open-source-web-app-TEST";
   currentPage = "";
 
-  routes = [
+  routes: AppRoute[] = [
     {
       path: "/home",
       label: "Home",
@@ -58,6 +59,11 @@ export class AppComponent {
       path: "/design-lab",
       label: "Design Lab",
       icon: "brush",
+    },
+    {
+      path: "/settings",
+      label: "Settings",
+      icon: "settings",
     },
   ];
 

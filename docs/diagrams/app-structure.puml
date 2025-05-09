@@ -1,0 +1,65 @@
+@startuml App Structure
+
+' Style settings
+skinparam classAttributeIconSize 0
+skinparam packageStyle rectangle
+skinparam linetype ortho
+
+package "app" {
+  class AppComponent {
+    - title: string
+    - currentPage: string
+    - routes: AppRoute[]
+    + constructor(router: Router)
+  }
+
+  interface AppRoute {
+    + path: string
+    + label: string
+    + icon: string
+  }
+
+  AppComponent ..> AppRoute : uses
+}
+
+package "public" {
+  package "pages" {
+    class HomeComponent {
+      + title: string
+    }
+
+    class TemplatesComponent {
+      + title: string
+    }
+
+    class FavoritesComponent {
+      + title: string
+    }
+
+    class ExploreComponent {
+      + title: string
+    }
+
+    class ProjectsComponent {
+      + title: string
+    }
+
+    class DesignLabComponent {
+      + title: string
+    }
+
+    class SettingsComponent {
+      + title: string
+    }
+  }
+}
+
+AppComponent ..> HomeComponent : use
+AppComponent ..> TemplatesComponent : use
+AppComponent ..> FavoritesComponent : use
+AppComponent ..> ExploreComponent : use
+AppComponent ..> ProjectsComponent : use
+AppComponent ..> DesignLabComponent : use
+AppComponent ..> SettingsComponent : use
+
+@enduml 
