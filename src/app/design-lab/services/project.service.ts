@@ -1,23 +1,33 @@
 import { Injectable } from '@angular/core';
 import { BaseService } from '../../shared/services/base.service';
 import { Project } from '../model/project.entity';
-import { map } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { ProjectAssembler } from './project.assembler';
 import { ProjectResponse } from './project.response';
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class ProjectService extends BaseService<Project> {
-  constructor() {
-    super('/projects');
-  }
+    constructor() {
+        super('/projects');
+    }
 
-  public getAllById(id: string) {
-    return this.http
-      .get<ProjectResponse[]>(`${this.resourcePath()}/${id}`, this.httpOptions)
-      .pipe(
-        map((response) => ProjectAssembler.ToEntitiesFromResponse(response))
-      );
-  }
+    public getAllById(id: string): Observable<Project[]> {
+
+        return this.http
+            .get<ProjectResponse[]>(
+                `${this.resourcePath()}`,
+                {
+                    params: {
+                        user_id: id,
+                    },
+                }
+            )
+            .pipe(
+                map((response) => {
+                    return ProjectAssembler.ToEntitiesFromResponse(response);
+                })
+            );
+    }
 }

@@ -19,6 +19,7 @@ export class ProjectAssembler {
   }
 
   static ToEntitiesFromResponse(response: ProjectResponse[]): Project[] {
+    console.log('RESPONSE IN PROJECT ASSEMBLER', response);
     return response.map((projectResponse) => {
       return ProjectAssembler.ToEntityFromResponse(projectResponse);
     });

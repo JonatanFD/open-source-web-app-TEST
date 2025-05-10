@@ -7,10 +7,11 @@
   "/favorites": "/favorites",
   "/favorites/:id": "/favorites/:id",
   "/projects": "/projects",
-  "/projects/:id": "/projects/:id",
+  "/projects/:id": "/projects/:user_id",
+  "/projects/user/:user_id": "/projects?user_id=:user_id",
   "/designs": "/designs",
   "/designs/:id": "/designs/:id",
   "/user/settings": "/settings",
   "/user/favorites": "/favorites",
   "/user/projects": "/projects"
-} 
+}
