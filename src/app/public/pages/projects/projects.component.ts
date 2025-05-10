@@ -16,7 +16,7 @@ export class ProjectsComponent {
     private projectService = inject(ProjectService);
 
     // TODO: We should change this constant name
-    private RECENT_PROJECTS_DIFFTIME: number = 1;
+    private RECENT_PROJECTS_DIFFTIME: number = 2
 
     projects: Project[] = [];
     recentProjects: Project[] = [];

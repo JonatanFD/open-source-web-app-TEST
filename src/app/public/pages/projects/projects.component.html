@@ -10,11 +10,6 @@
             <li>
                 <mat-card class="project-card">
                     <img mat-card-image [src]="project.previewImageUrl" [alt]="project.name">
-
-                    <mat-card-content>
-                        <span>{{ project.name }}</span>
-
-                    </mat-card-content>
                 </mat-card>
             </li>
             }
@@ -28,7 +23,9 @@
         <ul class="grid">
             @for (project of this.projects; track project.id) {
             <li>
-                <span>{{ project.name }}</span>
+                <mat-card class="project-card">
+                    <img mat-card-image [src]="project.previewImageUrl" [alt]="project.name">
+                </mat-card>
             </li>
             }
         </ul>
