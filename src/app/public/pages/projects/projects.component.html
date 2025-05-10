@@ -2,14 +2,24 @@
     <div>
         <h2>Recent Projects</h2>
         <ul class="grid">
-            <li class="add-project">
-                <mat-icon>add</mat-icon>
-            </li>
+            <a
+                routerLink="/design-lab/new"
+                routerLinkActive="active"
+                class="add-project"
+            >
+                <li>
+                    <mat-icon>add</mat-icon>
+                </li>
+            </a>
 
             @for (project of this.recentProjects; track project.id) {
             <li>
                 <mat-card class="project-card">
-                    <img mat-card-image [src]="project.previewImageUrl" [alt]="project.name">
+                    <img
+                        mat-card-image
+                        [src]="project.previewImageUrl"
+                        [alt]="project.name"
+                    />
                 </mat-card>
             </li>
             }
@@ -17,14 +27,16 @@
     </div>
 
     <div>
-        <h2>
-            All Projects
-        </h2>
+        <h2>All Projects</h2>
         <ul class="grid">
             @for (project of this.projects; track project.id) {
             <li>
                 <mat-card class="project-card">
-                    <img mat-card-image [src]="project.previewImageUrl" [alt]="project.name">
+                    <img
+                        mat-card-image
+                        [src]="project.previewImageUrl"
+                        [alt]="project.name"
+                    />
                 </mat-card>
             </li>
             }
